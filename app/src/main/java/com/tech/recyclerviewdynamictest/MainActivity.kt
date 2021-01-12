@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"user is not allowed to access data",Toast.LENGTH_SHORT).show()
         }
     }
-    private fun fetchData() {
+    fun fetchData() {
         var path="/storage/emulated/0/WhatsApp/Media/WhatsApp Images/"
         var f= File(path)
         if(!f.exists())

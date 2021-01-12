@@ -1,5 +1,6 @@
 package com.tech.recyclerviewdynamictest
 
+import android.app.ActionBar
 import android.app.Dialog
 import android.graphics.BitmapFactory
 import android.media.ThumbnailUtils
@@ -43,12 +44,13 @@ class MyAdapter(var mainActivity: MainActivity, var listfiles: Array<File>?) :
             dialog.setTitle("message")
             dialog.setContentView(R.layout.cust_dailog)
 
-            val layoutParams = dialog.window!!.attributes
-            dialog.window!!.setLayout(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT
-            )
-            dialog.window!!.attributes = layoutParams
+//            val layoutParams = dialog.window!!.attributes
+//            dialog.window!!.setLayout(
+//                WindowManager.LayoutParams.MATCH_PARENT,
+//                WindowManager.LayoutParams.MATCH_PARENT
+//            )
+//            dialog.window!!.attributes = layoutParams
+
             dialog.show()
 
 
@@ -61,7 +63,9 @@ class MyAdapter(var mainActivity: MainActivity, var listfiles: Array<File>?) :
                     Toast.makeText(mainActivity, "image deleted successfully", Toast.LENGTH_SHORT)
                         .show()
                     dialog.dismiss()
-                    notifyDataSetChanged()//it notifiess us whenever any changes happened
+                 notifyDataSetChanged()//it notifiess us whenever any changes happened
+
+                 //   mainActivity.fetchData()
 
                 } else {
                     Toast.makeText(mainActivity, "unable to delete image", Toast.LENGTH_SHORT)
