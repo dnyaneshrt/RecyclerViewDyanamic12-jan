@@ -47,11 +47,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun fetchData() {
-        var path="/storage/emulated/0/WhatsApp/Media/WhatsApp Images/"
+        var path="/storage/emulated/0/DCIM/camera/"
         var f= File(path)
         if(!f.exists())
         {
-            var path="/storage/SdCard0/WhatsApp/Media/WhatsApp Images/"
+            var path="/storage/SdCard0/DCIM/camera/"
             var f= File(path)
         }
        var listfiles= f.listFiles()
